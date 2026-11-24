@@ -1,4 +1,4 @@
-data_folder: C:\Workbench\2026-2027-ediae\ediae-fechas\repositorios
+data_folder: C:\Workbench\2026-2027-ediae\ediae-fechas\data
 data_file:
   name: data.json
   format: json

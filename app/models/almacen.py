@@ -17,3 +17,18 @@ class Almacen(BaseModel):
             bool: True if the user exists, False otherwise.
         """
         return any(usuario.username == username for usuario in self.usuarios)
+
+    def get_usuario(self, username: str) -> Usuario | None:
+        """
+        Get the user with the given username from the almacen.
+
+        Args:
+            username (str): The username of the user to retrieve.
+
+        Returns:
+            Usuario | None: The user with the given username, or None if not found.
+        """
+        for usuario in self.usuarios:
+            if usuario.username == username:
+                return usuario
+        return None
